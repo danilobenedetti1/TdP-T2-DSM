@@ -3,7 +3,7 @@ package br.com.dsm.trabalho_avaliativo_2.model;
 public class Figurinha {
 	private String url;
 	private String titulo;
-	private String nomeArquivo;
+	private String nome;
 	public String getUrl() {
 		return url;
 	}
@@ -16,10 +16,10 @@ public class Figurinha {
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
 	}
-	public String getNomeArquivo() {
-		return nomeArquivo;
+	public String getNome() {
+		return nome;
 	}
-	public void setNomeArquivo(String nomeArquivo) {
-		this.nomeArquivo = nomeArquivo;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 }

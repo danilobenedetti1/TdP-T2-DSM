@@ -11,7 +11,7 @@ import java.io.InputStream;
 
 public class AppModel {
 
-	public void gerarFigurinha(InputStream inputStream, String titulo, String nomeArquivo) throws IOException {
+	public void gerarFigurinha(InputStream inputStream, String titulo, String nome) throws IOException {
 
 		BufferedImage imagemOriginal = ImageIO.read(inputStream);
 
@@ -31,7 +31,7 @@ public class AppModel {
 		graphics.setColor(Color.YELLOW);
 		graphics.drawString(titulo, 50, novaAltura - 80);
 
-		String url = "saida/" + nomeArquivo + ".png";
+		String url = "saida/" + nome + ".png";
 		ImageIO.write(novaImagem, "png", new File(url));
 	}
 }

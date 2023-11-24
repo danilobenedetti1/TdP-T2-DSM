@@ -3,13 +3,11 @@ package br.com.dsm.trabalho_avaliativo_2.controller;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
-
 import br.com.dsm.trabalho_avaliativo_2.model.Figurinha;
 import br.com.dsm.trabalho_avaliativo_2.model.AppModel;
 
@@ -31,14 +29,14 @@ public class AppController {
 		try {
 			InputStream inputStream = new URL(figurinha.getUrl()).openStream();
 			String titulo = figurinha.getTitulo();
-			String nomeArquivo = figurinha.getNomeArquivo();
+			String nome = figurinha.getNome();
 
 			var gerador = new AppModel();
-			gerador.gerarFigurinha(inputStream, titulo, nomeArquivo);
+			gerador.gerarFigurinha(inputStream, titulo, nome);
 
 			String mensagem = "Figurinha criada com sucesso.";
 			modelAndView.addObject("mensagem", mensagem);
-			modelAndView.addObject("nomeArquivo", nomeArquivo);
+			modelAndView.addObject("nome", nome);
 		} catch (IOException e) {
 			String mensagemErro = "Poxa, isso não funcionou direito. Por favor, verifique o link digitado.";
 			modelAndView.addObject("mensagemErro", mensagemErro);
