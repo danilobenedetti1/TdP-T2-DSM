@@ -1,12 +1,8 @@
-# Trabalho Avaliativo II
+# T2 - Técnicas de Programação
 
 Autores:
 
 * Eduarda Matos		RA: 1091392223010
 * João Paulo Falcuci		RA: 1091392223005
 
-Curso: Desenvolvimento de Software Multiplataforma (Fatec - Franca/SP)
-
-Disciplina: Técnicas de Programação I
-
-Período: 2º semestre (2023/1)
+2º semestre de 2023 - curso DSM - Fatec Franca
