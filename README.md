@@ -1,8 +1,8 @@
 # T2 - Técnicas de Programação
 Alunos:
 
-Danilo Benedetti
+*Danilo Benedetti
 
-Guilherme Carleto
+*Guilherme Carleto
 
 2º semestre de 2023 - curso DSM - Fatec Franca
