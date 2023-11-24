@@ -9,7 +9,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class GeradorFigurinha {
+public class AppModel {
 
 	public void gerarFigurinha(InputStream inputStream, String titulo, String nomeArquivo) throws IOException {
 
@@ -31,8 +31,7 @@ public class GeradorFigurinha {
 		graphics.setColor(Color.YELLOW);
 		graphics.drawString(titulo, 50, novaAltura - 80);
 
-		String urlFigurinha = "saida/" + nomeArquivo + ".png";
-		// escrever uma mensagem na nova imagem
-		ImageIO.write(novaImagem, "png", new File(urlFigurinha));
+		String url = "saida/" + nomeArquivo + ".png";
+		ImageIO.write(novaImagem, "png", new File(url));
 	}
 }

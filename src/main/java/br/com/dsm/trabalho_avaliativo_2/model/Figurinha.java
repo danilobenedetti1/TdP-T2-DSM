@@ -1,14 +1,14 @@
 package br.com.dsm.trabalho_avaliativo_2.model;
 
 public class Figurinha {
-	private String urlImagem;
+	private String url;
 	private String titulo;
 	private String nomeArquivo;
-	public String getUrlImagem() {
-		return urlImagem;
+	public String getUrl() {
+		return url;
 	}
-	public void setUrlImagem(String urlImagem) {
-		this.urlImagem = urlImagem;
+	public void setUrl(String url) {
+		this.url = url;
 	}
 	public String getTitulo() {
 		return titulo;

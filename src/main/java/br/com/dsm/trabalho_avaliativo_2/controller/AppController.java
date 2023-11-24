@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import br.com.dsm.trabalho_avaliativo_2.model.Figurinha;
-import br.com.dsm.trabalho_avaliativo_2.model.GeradorFigurinha;
+import br.com.dsm.trabalho_avaliativo_2.model.AppModel;
 
 @Controller
 @RequestMapping("/figurinha")
@@ -29,21 +29,18 @@ public class AppController {
 		ModelAndView modelAndView = new ModelAndView("figurinha");
 
 		try {
-			InputStream inputStream = new URL(figurinha.getUrlImagem()).openStream();
+			InputStream inputStream = new URL(figurinha.getUrl()).openStream();
 			String titulo = figurinha.getTitulo();
 			String nomeArquivo = figurinha.getNomeArquivo();
 
-			var gerador = new GeradorFigurinha();
+			var gerador = new AppModel();
 			gerador.gerarFigurinha(inputStream, titulo, nomeArquivo);
 
-			String caminhoFigurinha = "saida/" + nomeArquivo + ".png";
-			String mensagem = "Figurinha gerada com sucesso. Caminho da figurinha: " + caminhoFigurinha;
-
+			String mensagem = "Figurinha criada com sucesso.";
 			modelAndView.addObject("mensagem", mensagem);
-			modelAndView.addObject("caminhoFigurinha", caminhoFigurinha);
 			modelAndView.addObject("nomeArquivo", nomeArquivo);
 		} catch (IOException e) {
-			String mensagemErro = "Ocorreu um erro ao gerar a figurinha. Verifique o link da imagem e tente novamente.";
+			String mensagemErro = "Poxa, isso não funcionou direito. Por favor, verifique o link digitado.";
 			modelAndView.addObject("mensagemErro", mensagemErro);
 		}
 
