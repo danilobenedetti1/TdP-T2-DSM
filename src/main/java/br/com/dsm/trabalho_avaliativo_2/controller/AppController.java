@@ -1,12 +1,13 @@
 package br.com.dsm.trabalho_avaliativo_2.controller;
 
-import java.io.IOException;
+
 import java.io.InputStream;
+import java.io.IOException;
 import java.net.URL;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.ModelAndView;
 import br.com.dsm.trabalho_avaliativo_2.model.Figurinha;
 import br.com.dsm.trabalho_avaliativo_2.model.AppModel;
@@ -16,7 +17,7 @@ import br.com.dsm.trabalho_avaliativo_2.model.AppModel;
 public class AppController {
 
 	@GetMapping
-	public ModelAndView exibirPagina() {
+	public ModelAndView view() {
 		return new ModelAndView("figurinha");
 	}
 
